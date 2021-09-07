@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="ProfilePanel" fx:id="profilePanel" prefHeight="490.0" prefWidth="340.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sbu.cs.group4.frontEnd.View.Children.ViewUserController">
+    <children>
+        <Button id="homeButton" fx:id="homeButton" layoutX="1.0" layoutY="456.0" mnemonicParsing="false" onAction="#homeButton" prefHeight="40.0" prefWidth="56.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="35.0">
+                    <image>
+                        <Image url="@../Image/home1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button id="searchButtton" fx:id="AddpostButton" layoutX="149.0" layoutY="454.0" mnemonicParsing="false" onAction="#addPostButton" prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: #ffffff;" />
+        <Button id="ActivityButton" fx:id="ActivityButton" layoutX="216.0" layoutY="455.0" mnemonicParsing="false" onAction="#activityButton" prefHeight="41.0" prefWidth="52.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="36.0">
+                    <image>
+                        <Image url="@../Image/activity1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button id="profileButton" fx:id="ProfileButton" layoutX="290.0" layoutY="455.0" mnemonicParsing="false" onAction="#ProfileButton" prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="34.0">
+                    <image>
+                        <Image url="@../Image/profile1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <ImageView fitHeight="34.0" fitWidth="36.0" layoutX="80.0" layoutY="458.0">
+            <image>
+                <Image url="@../Image/search2.png" />
+            </image>
+        </ImageView>
+        <ListView id="listViewUserProfile" fx:id="listViewUserProfile" layoutY="214.0" prefHeight="221.0" prefWidth="343.0" />
+        <Circle id="profileImage" fx:id="profileImage" layoutX="74.0" layoutY="59.0" radius="36.0" strokeType="INSIDE" strokeWidth="3.0">
+            <stroke>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#8514b8" />
+                        <Stop color="#cd2a4dfa" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </stroke>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#48454a" />
+                        <Stop color="#b7c0c9" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Circle>
+        <Text id="usernameField" fx:id="usernameField" layoutX="98.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="192.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Button id="backButton" fx:id="backButton" layoutY="3.0" mnemonicParsing="false" onAction="#backButton" prefHeight="41.0" prefWidth="31.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="29.0" fitWidth="23.0">
+                    <image>
+                        <Image url="@../Image/back.PNG" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Text id="Biography" fx:id="Biography" layoutX="27.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="142.13671875" />
+        <Text id="followersNumber" fx:id="followersNumber" layoutX="203.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="22.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text id="followingsNumber" fx:id="followingsNumber" layoutX="266.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="22.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text id="postsNumber" fx:id="postsNumber" layoutX="150.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" textAlignment="CENTER" wrappingWidth="22.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Label layoutX="145.0" layoutY="61.0" prefHeight="19.0" prefWidth="32.0" text="Post">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="187.0" layoutY="61.0" text="Followers">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Label layoutX="255.0" layoutY="61.0" text="Following">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Label>
+        <Button id="messageButton" fx:id="messageButton" layoutX="184.0" layoutY="131.0" mnemonicParsing="false" onAction="#messageButton" prefHeight="27.0" prefWidth="114.0" style="-fx-background-color: #ffffff; -fx-border-color: #c9bfbf; -fx-border-radius: 5;" text="Message">
+            <font>
+                <Font name="Microsoft JhengHei UI" size="12.0" />
+            </font>
+        </Button>
+        <Button id="FollowButton" fx:id="unfollowButton" layoutX="53.0" layoutY="132.0" mnemonicParsing="false" onAction="#unfollowButton" prefHeight="25.0" prefWidth="114.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-border-color: #c9bfbf;" text="Unfollow" />
+        <Button id="IGTVButton" fx:id="IGTVButton" layoutX="110.0" layoutY="169.0" mnemonicParsing="false" onAction="#IGTVButton" prefHeight="35.0" prefWidth="114.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="35.0" fitWidth="35.0">
+                    <image>
+                        <Image url="@../Image/IGVT.PNG" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Button id="TaggedPostButton" fx:id="TaggedPostButton" layoutX="225.0" layoutY="173.0" mnemonicParsing="false" onAction="#TaggedPostButton" prefHeight="35.0" prefWidth="114.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="35.0">
+                    <image>
+                        <Image url="@../Image/post2.PNG" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="38.0" layoutY="181.0">
+            <image>
+                <Image url="@../Image/post1.PNG" />
+            </image>
+        </ImageView>
+        <Line endX="100.0" layoutX="27.0" layoutY="214.0" startX="-30.0" stroke="#5e5a5a" />
+        <ImageView fitHeight="16.0" fitWidth="22.0" layoutX="310.0" layoutY="3.0">
+            <image>
+                <Image url="@../Image/setting10.PNG" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="35.0" fitWidth="40.0" layoutX="149.0" layoutY="458.0">
+            <image>
+                <Image url="@../Image/addpost1.PNG" />
+            </image>
+        </ImageView>
+        <ImageView id="NotificationSign" fx:id="NotificationSign" fitHeight="24.0" fitWidth="50.0" layoutX="213.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true" />
+      <GridPane fx:id="postGrid" layoutX="1.0" layoutY="230.0" prefHeight="203.0" prefWidth="336.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="490.0" prefWidth="340.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sbu.cs.group4.frontEnd.View.Children.EditProfileController">
+   <children>
+      <Button id="CancelButton" fx:id="CancelButton" mnemonicParsing="false" onAction="#CancelButton" prefHeight="38.0" prefWidth="72.0" style="-fx-background-color: #ffffff;" text="Cancel">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button id="DoneButton" fx:id="DoneButton" layoutX="268.0" mnemonicParsing="false" onAction="#DoneButton" prefHeight="38.0" prefWidth="72.0" style="-fx-background-color: #ffffff;" text="Done" textFill="#65abe1">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="107.0" prefHeight="38.0" prefWidth="127.0" text="Edit Profile">
+         <font>
+            <Font name="B Nazanin" size="15.0" />
+         </font>
+      </Label>
+      <Line endX="233.0" layoutX="107.0" layoutY="38.0" startX="-110.0" stroke="#c3b7b7" />
+      <Circle id="ProfileCircle" fx:id="ProfileCircle" layoutX="170.0" layoutY="91.0" radius="45.0" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#6f859a" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Circle>
+      <Label layoutX="30.0" layoutY="182.0" prefHeight="38.0" prefWidth="35.0" text="Name">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="220.0" prefHeight="38.0" prefWidth="72.0" text="Password">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="29.0" layoutY="261.0" prefHeight="38.0" prefWidth="58.0" text="Email">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="305.0" prefHeight="31.0" prefWidth="58.0" text="Bio">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Line endX="229.0" endY="5.0" layoutX="110.0" layoutY="175.0" startX="-109.0" startY="5.0" stroke="#c3b7b7" />
+      <Line endX="229.0" layoutX="110.0" layoutY="220.0" stroke="#c3b7b7" />
+      <Line endX="229.0" layoutX="110.0" layoutY="260.0" stroke="#c3b7b7" />
+      <Line endX="229.0" layoutX="110.0" layoutY="300.0" stroke="#c3b7b7" />
+      <Button id="Switch to Professional Account" fx:id="SwitchToProfessionalButton" alignment="TOP_LEFT" layoutX="16.0" layoutY="351.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #ffffff;" text="Switch to Professional Account" textFill="#5890dd">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Button>
+      <Line endX="229.0" endY="5.0" layoutX="110.0" layoutY="334.0" startX="-109.0" startY="5.0" stroke="#c3b7b7" />
+      <Line endX="229.0" endY="5.0" layoutX="110.0" layoutY="378.0" startX="-109.0" startY="5.0" stroke="#c3b7b7" />
+      <Button layoutY="390.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="220.0" style="-fx-background-color: #ffffff;" text="Personal Information Setting" textFill="#5890dd">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Button>
+      <TextField id="NameField" fx:id="nameField" layoutX="125.0" layoutY="189.0" promptText="Name" style="-fx-background-color: #ffffff;" />
+      <TextField id="UsernameField" fx:id="passwordField" layoutX="125.0" layoutY="227.0" promptText="Password" style="-fx-background-color: #ffffff;" />
+      <TextField id="WebsiteField" fx:id="emailField" layoutX="125.0" layoutY="268.0" promptText="Email" style="-fx-background-color: #ffffff;" />
+      <TextField id="BioField" fx:id="bioField" layoutX="125.0" layoutY="308.0" promptText="Bio" style="-fx-background-color: #ffffff;" />
+      <Text layoutX="126.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Label layoutX="116.0" layoutY="136.0" prefHeight="17.0" prefWidth="127.0" text="Change Profile photo" textFill="#5890dd" />
+      <TextField id="ProfileImageAddress" fx:id="ProfileImageAddress" layoutX="73.0" layoutY="152.0" prefHeight="25.0" prefWidth="193.0" promptText="           Enter  Address :" style="-fx-background-color: #ffffff;" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="ProfilePanel" fx:id="profilePanel" prefHeight="490.0" prefWidth="340.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sbu.cs.group4.frontEnd.View.Children.HomeController">
+    <children>
+        <Button id="ProfileButton" fx:id="ProfileButton" layoutX="272.0" layoutY="431.0" mnemonicParsing="false" onAction="#ProfileButton" prefHeight="59.0" prefWidth="66.0" style="-fx-background-color: #ffffff;">
+         <graphic>
+            <ImageView id="ProfileButton" fitHeight="31.0" fitWidth="33.0">
+               <image>
+                  <Image url="@../Image/profile1.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+        <Button id="searchButton" fx:id="searchButton" layoutX="66.0" layoutY="431.0" mnemonicParsing="false" onAction="#searchButton" prefHeight="59.0" prefWidth="66.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="27.0" fitWidth="32.0">
+                    <image>
+                        <Image url="@../Image/search1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button id="addPostButton" fx:id="addPostButton" layoutX="132.0" layoutY="431.0" mnemonicParsing="false" onAction="#addPostButton" prefHeight="59.0" prefWidth="66.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="29.0" fitWidth="32.0">
+                    <image>
+                        <Image url="@../Image/addpost1.PNG" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button id="activityButton" fx:id="activityButton" layoutX="198.0" layoutY="431.0" mnemonicParsing="false" onAction="#activityButton" prefHeight="59.0" prefWidth="66.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="27.0" fitWidth="32.0">
+                    <image>
+                        <Image url="@../Image/activity1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Circle id="profileImage" fx:id="profileImage" centerY="-5.0" layoutX="52.0" layoutY="66.0" radius="30.0" strokeDashOffset="2.0" strokeMiterLimit="20.0" strokeType="INSIDE" strokeWidth="2.0" style="-fx-fill: tempProfile.png;">
+            <stroke>
+                <LinearGradient endX="1.0" endY="1.0" startX="0.05714285714285714">
+                    <stops>
+                        <Stop color="#905151f7" />
+                        <Stop color="#b53636f7" offset="0.218390804597701" />
+                  <Stop color="#c41a82" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </stroke>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#686d72" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill></Circle>
+        <Text id="Biography" fx:id="story" layoutX="25.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Story " wrappingWidth="66.0" />
+        <Line endX="250.0" layoutX="102.0" layoutY="110.0" startX="-105.0" stroke="#b5a9a9" />
+      <ImageView fitHeight="30.0" fitWidth="34.0" layoutX="13.0" layoutY="448.0">
+         <image>
+            <Image url="@../Image/home2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="90.0" layoutX="7.0" layoutY="-1.0">
+         <image>
+            <Image url="@../Image/login.PNG" />
+         </image>
+      </ImageView>
+      <Button id="DirectButton" fx:id="DirectButton" layoutX="298.0" layoutY="-1.0" mnemonicParsing="false" onAction="#DirectButton" prefHeight="42.0" prefWidth="39.0" style="-fx-background-color: #ffffff;">
+         <graphic>
+            <ImageView fitHeight="36.0" fitWidth="39.0">
+               <image>
+                  <Image url="@../Image/direct.PNG" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView id="NotificationSign" fx:id="NotificationSign" fitHeight="23.0" fitWidth="40.0" layoutX="210.0" layoutY="424.0" pickOnBounds="true" preserveRatio="true" />
+      <Button id="AddStory" fx:id="AddStory" layoutX="66.0" layoutY="69.0" mnemonicParsing="false" onAction="#AddStory" prefHeight="22.0" prefWidth="24.0" style="-fx-background-color: #377fc2; -fx-background-radius: 15;" text="+" textFill="WHITE">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Button>
+      <ScrollPane layoutX="5.0" layoutY="111.0" prefHeight="318.0" prefWidth="346.0">
+         <content>
+            <VBox prefHeight="314.0" prefWidth="343.0">
+               <children>
+                  <GridPane fx:id="postGrid" prefHeight="316.0" prefWidth="343.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <ScrollPane layoutX="90.0" layoutY="34.0" prefHeight="75.0" prefWidth="262.0" vbarPolicy="NEVER">
+         <content>
+            <HBox prefHeight="69.0" prefWidth="252.0">
+               <children>
+                  <GridPane fx:id="storyGrid" prefHeight="69.0" prefWidth="251.0" style="-fx-background-color: #ffffff;">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                  </GridPane>
+               </children>
+            </HBox>
+         </content>
+      </ScrollPane>
+    </children>
+</AnchorPane>

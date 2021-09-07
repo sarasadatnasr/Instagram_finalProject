@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sbu.cs.group4.frontEnd.View.Children.PostBoxController">
+    <children>
+        <AnchorPane id="AnchorPane" fx:id="AnchorPane" prefHeight="257.0" prefWidth="330.0">
+            <children>
+                <ImageView id="PostImage" fx:id="PostImage" fitHeight="174.0" fitWidth="321.0" layoutX="5.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+                <Button id="likeButton" fx:id="likeButton" layoutX="15.0" layoutY="200.0" mnemonicParsing="false" onAction="#likeButton" onDragDetected="#likeButtonDragged" onMouseClicked="#likeButton" onMouseDragged="#likeButtonDragged" prefHeight="34.0" prefWidth="45.0" style="-fx-background-color: #ffffff;">
+                    <graphic>
+                        <ImageView fitHeight="26.0" fitWidth="30.0">
+                            <image>
+                                <Image url="@../Image/activity1.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button id="commentButton" fx:id="commentButton" layoutX="61.0" layoutY="199.0" mnemonicParsing="false" onAction="#commentButton" prefHeight="34.0" prefWidth="45.0" style="-fx-background-color: #ffffff;">
+                    <graphic>
+                        <ImageView cacheHint="ROTATE" fitHeight="29.0" fitWidth="28.0" style="-fx-rotate: 270;">
+                            <image>
+                                <Image url="@../Image/comment.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button id="shareButton" fx:id="shareButton" layoutX="105.0" layoutY="183.0" mnemonicParsing="false" onAction="#shareButton" prefHeight="34.0" prefWidth="45.0" style="-fx-background-color: #ffffff;" />
+                <Button id="SaveButton" fx:id="SaveButton" layoutX="278.0" layoutY="199.0" mnemonicParsing="false" onAction="#SaveButton" prefHeight="37.0" prefWidth="38.0" style="-fx-background-color: #ffffff;">
+                    <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="22.0">
+                            <image>
+                                <Image url="@../Image/setting4.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Text id="LikeNumber" fx:id="LikeNumber" layoutX="26.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="23.0" />
+                <Text id="commentNumber" fx:id="commentNumber" layoutX="72.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="23.0" />
+                <Text id="DateText" fx:id="DateText" layoutX="251.0" layoutY="247.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="74.13671875" />
+                <ImageView fitHeight="37.0" fitWidth="38.0" layoutX="109.0" layoutY="199.0">
+                    <image>
+                        <Image url="@../Image/direct.PNG" />
+                    </image>
+                </ImageView>
+            <Button id="deleteButton" fx:id="deleteButton" layoutX="273.0" layoutY="2.0" mnemonicParsing="false" onAction="#deleteButton" text="delete" />
+            </children>
+        </AnchorPane>
+    </children>
+</VBox>

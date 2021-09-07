@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="ProfilePanel" fx:id="profilePanel" prefHeight="490.0" prefWidth="340.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sbu.cs.group4.frontEnd.View.Children.AddStoryController">
+    <children>
+        <Button id="homeButton" fx:id="homeButton" layoutX="4.0" layoutY="456.0" mnemonicParsing="false" onAction="#homeButton" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="35.0">
+                    <image>
+                        <Image url="@../Image/home1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button id="searchButtton" fx:id="searchButton" layoutX="66.0" layoutY="454.0" mnemonicParsing="false" onAction="#searchButton" prefHeight="43.0" prefWidth="50.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="31.0" fitWidth="36.0">
+                    <image>
+                        <Image url="@../Image/search1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button id="ActivityButton" fx:id="ActivityButton" layoutX="216.0" layoutY="455.0" mnemonicParsing="false" onAction="#activityButton" prefHeight="41.0" prefWidth="52.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="36.0">
+                    <image>
+                        <Image url="@../Image/activity1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button id="profileButton" fx:id="ProfileButton" layoutX="290.0" layoutY="455.0" mnemonicParsing="false" onAction="#ProfileButton" prefHeight="32.0" prefWidth="50.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="34.0">
+                    <image>
+                        <Image url="@../Image/profile1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <ImageView id="AddPostButton" fx:id="addpostButton" fitHeight="33.0" fitWidth="36.0" layoutX="150.0" layoutY="459.0">
+            <image>
+                <Image url="@../Image/addpost2.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="14.0" prefHeight="41.0" prefWidth="89.0" text="New Story">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+        </Label>
+        <Line endX="185.0" layoutX="150.0" layoutY="40.0" startX="-150.0" stroke="#807777" />
+        <JFXTextField id="storyAddressField" fx:id="storyAddressField" focusColor="#ddd5d5" layoutX="31.0" layoutY="67.0" prefHeight="47.0" prefWidth="277.0" promptText="Enter Your image Address" style="-fx-background-color: #ddd5d5; -fx-background-radius: 6;" unFocusColor="#fffdfd" />
+        <Button id="DoneButton" fx:id="DoneButton" layoutX="133.0" layoutY="297.0" mnemonicParsing="false" onAction="#doneButton" prefHeight="33.0" prefWidth="73.0" style="-fx-background-color: #4f87d0;" text="Done" textFill="#f5f6f8" />
+        <ImageView id="NotificationSign" fx:id="NotificationSign" fitHeight="22.0" fitWidth="39.0" layoutX="223.0" layoutY="434.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+</AnchorPane>

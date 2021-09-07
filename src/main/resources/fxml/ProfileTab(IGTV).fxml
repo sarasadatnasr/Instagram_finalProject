@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="ProfilePanel" fx:id="profilePanel" prefHeight="490.0" prefWidth="340.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sbu.cs.group4.frontEnd.View.Children.ProfileController">
+    <children>
+        <Button id="homeButton" fx:id="homeButton" layoutX="1.0" layoutY="456.0" mnemonicParsing="false" onAction="#homeButton" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="32.0" fitWidth="35.0">
+                    <image>
+                        <Image url="@../Image/home1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button id="searchButton" fx:id="searchButton" layoutX="66.0" layoutY="456.0" mnemonicParsing="false" onAction="#searchButton" prefHeight="35.0" prefWidth="45.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="31.0" fitWidth="36.0">
+                    <image>
+                        <Image url="@../Image/search1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button id="addPostButton" fx:id="addPostButton" layoutX="146.0" layoutY="453.0" mnemonicParsing="false" onAction="#addPostButton" prefHeight="40.0" prefWidth="50.0" style="-fx-background-color: #ffffff;" />
+        <Button id="activityButton" fx:id="activityButton" layoutX="216.0" layoutY="455.0" mnemonicParsing="false" onAction="#activityButton" prefHeight="41.0" prefWidth="52.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="30.0" fitWidth="34.0">
+                    <image>
+                        <Image url="@../Image/activity1.png" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <ImageView id="myProfile" fx:id="myProfile" fitHeight="38.0" fitWidth="39.0" layoutX="296.0" layoutY="455.0">
+            <image>
+                <Image url="@../Image/profile2.png" />
+            </image>
+        </ImageView>
+        <Circle id="profileImage" fx:id="profileImage" fill="#dce2e8" layoutX="58.0" layoutY="71.0" radius="34.0" strokeType="INSIDE" style="-fx-fill: tempProfile.png;">
+            <stroke>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop color="#171717f7" />
+                        <Stop color="WHITE" offset="1.0" />
+                    </stops>
+                </LinearGradient>
+            </stroke></Circle>
+        <Label layoutX="142.0" layoutY="82.0" prefHeight="25.0" prefWidth="23.0" text="Post" />
+        <Label layoutX="194.0" layoutY="86.0" prefHeight="17.0" prefWidth="56.0" text="Followers" />
+        <Label layoutX="264.0" layoutY="86.0" prefHeight="17.0" prefWidth="65.0" text="Following" />
+        <Text id="postsNumber" fx:id="postsNumber" layoutX="148.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="11.703125">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text id="FollowersNumber" fx:id="followersNumber" layoutX="216.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="11.703125">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text id="FollowingsNumber" fx:id="followingsNumber" layoutX="282.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="11.703125">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text id="usernameText" fx:id="UsernameText" layoutX="24.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="68.0">
+            <font>
+                <Font size="13.0" />
+            </font>
+        </Text>
+        <JFXButton id="EditProfile" fx:id="editProfile" layoutX="32.0" layoutY="131.0" onAction="#editProfile" prefHeight="27.0" prefWidth="283.0" style="-fx-background-color: #ffffff; -fx-border-color: #737373; -fx-border-radius: 4;" text="Edit  Profile" />
+        <Button id="addPost" fx:id="AddPost" layoutX="250.0" layoutY="-1.0" mnemonicParsing="false" onAction="#addPost" prefHeight="30.0" prefWidth="32.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fx:id="addPost" fitHeight="27.0" fitWidth="28.0">
+                    <image>
+                        <Image url="@../Image/addpost1.PNG" />
+                    </image>
+                </ImageView>
+            </graphic></Button>
+        <Button id="setting" fx:id="setting" layoutX="296.0" layoutY="4.0" mnemonicParsing="false" onAction="#setting" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="17.0" fitWidth="23.0">
+                    <image>
+                        <Image url="@../Image/setting.PNG" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Text id="Biography" fx:id="Biography" layoutX="8.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="200.0" />
+        <Button id="TaggedButton" fx:id="TaggedButton" layoutX="236.0" layoutY="163.0" mnemonicParsing="false" onAction="#TaggedButton" prefHeight="37.0" prefWidth="111.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="29.0" fitWidth="32.0">
+                    <image>
+                        <Image url="@../Image/post2.PNG" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <Line endX="40.0" layoutX="201.0" layoutY="201.0" startX="-80.0" />
+        <Button id="postButton" fx:id="postButton" layoutX="3.0" layoutY="159.0" mnemonicParsing="false" onAction="#postButton" prefHeight="38.0" prefWidth="111.0" style="-fx-background-color: #ffffff;">
+            <graphic>
+                <ImageView fitHeight="27.0" fitWidth="29.0">
+                    <image>
+                        <Image url="@../Image/post1.PNG" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
+        <ImageView fitHeight="35.0" fitWidth="32.0" layoutX="160.0" layoutY="160.0">
+            <image>
+                <Image url="@../Image/IGVT.PNG" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="34.0" fitWidth="39.0" layoutX="146.0" layoutY="459.0">
+            <image>
+                <Image url="@../Image/addpost1.PNG" />
+            </image>
+        </ImageView>
+        <ImageView id="NotificationSign" fx:id="NotificationSign" fitHeight="24.0" fitWidth="44.0" layoutX="217.0" layoutY="439.0" pickOnBounds="true" preserveRatio="true" />
+      <JFXListView id="listViewMyProfile" fx:id="listViewMyProfile" layoutX="1.0" layoutY="204.0" prefHeight="233.0" prefWidth="347.0" />
+    </children>
+</AnchorPane>

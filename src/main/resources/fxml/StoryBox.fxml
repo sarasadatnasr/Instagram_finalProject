@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sbu.cs.group4.frontEnd.View.Children.StoryBoxController">
+   <children>
+      <AnchorPane id="AnchorBox" fx:id="AnchorBox" prefHeight="78.0" prefWidth="70.0">
+          <children>
+              <Text id="UsernameText" fx:id="UsernameText" layoutX="8.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="54.0" />
+            <Circle id="StoryCircle" fx:id="StoryCircle" layoutX="35.0" layoutY="27.0" onMouseClicked="#StoryCircle" radius="27.0" strokeType="INSIDE" strokeWidth="2.0">
+               <fill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#525557" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#3b4597" />
+                        <Stop color="#cf14d9" offset="0.41000118497452304" />
+                        <Stop color="#d414d9" offset="0.46265355294861127" />
+                        <Stop color="#da1050" offset="0.7739463601532567" />
+                        <Stop color="#da1050" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Circle>
+          </children>
+      </AnchorPane>
+   </children>
+</VBox>
